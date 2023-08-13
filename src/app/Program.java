@@ -19,7 +19,7 @@ public class Program {
 		cookies.put("username", "Maria");
 		cookies.put("email", "maria@gamil.com");
 		
-		System.out.println("All Cookies: ");
+		System.out.println("All Cookies: \n");
 		for(String key: cookies.keySet()) {
 			System.out.println(key + ": " + cookies.get(key));
 		}
@@ -31,17 +31,27 @@ public class Program {
 		Product p1 = new Product("TV", 990.00);
 		Product p2 = new Product("Video-Game", 1200.00);
 		Product p3 = new Product("Notebook", 2800.00);
+		Boolean test = false;
 		
 		stock.put(p1, 1.0);
 		stock.put(p2, 1.0);
 		stock.put(p3, 1.0);
 		
-		System.out.println("All Products: ");
+		System.out.println("All Products: \n");
 		
 		for(Product key: stock.keySet()) {
 			System.out.println(key);
+			if(key.getName() == "Notebook") {
+				test = true;
+			}
 		}
 		
+		System.out.print("\nList of Products contains 'Notebook'? ");
+		if(test) {
+			System.out.println("Sim");
+		}else {
+			System.out.println("No");
+			}
 
 	}
 
